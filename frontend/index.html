@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./scripts/constans.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/form.js"></script>
+    <script src="./scripts/index.js"></script>
+    <title>CC Manager</title>
+</head>
+<body class="day">
+    <header>
+        <h1>Bienvenidos a CC Manager</h1>
+        <nav class="menu-button-container">
+            <button class="button-option" id="button-create-physical">Crear Persona Fisica</button>
+            <button class="button-option" id="button-create-legal">Crear Persona Juridica</button> 
+            <button class="button-option" id="button-list-all">Listar todos los Clientes</button> 
+        </nav>
+    </header>
+    <main>
+        <section class="search-container">
+            <div class="search">
+                <h2>Buscar</h2>
+                <div>
+                    <input id="input-search" type="text" placeholder="Busca Cliente por RUT"> 
+                    <button class="button-search-disabled" id="button-search">Buscar</button>
+                </div>
+            </div>
+        </section>
+        <section class="form-container" id="form-container">
+            <div class="label-bar">
+                <label>Nuevo cliente:</label><br><br>
+            </div>
+            <form class="form-physical" id= "form-physical">
+                <label for="rut">RUT</label>
+                <input type="text" id="rutP" name="rut">
+
+                <label for="fname">Nombre</label>
+                <input type="text" id="fname" name="firstName">
+
+                <label for="lname">Apellido</label>
+                <input type="text" id="lname" name="lastName">
+
+                <label for="cc">Cuenta Corriente</label>
+                <input type="number" id="cc" name="cc"><br>
+
+                <input type="button" value="Submit">
+            </form>
+            <form class="form-legal" id="form-legal">
+                <label for="rut">RUT</label>
+                <input type="text" id="rutL" name="rut">
+
+                <label for="bname">Razon Social</label>
+                <input type="text" id="bname" name="businessName">
+
+                <label for="fyear">Año de Fundación</label>
+                <input type="number" id="fyear" name="foundationYear"><br>
+
+                <input type="submit" value="Submit">
+            </form>  
+        </section>
+    </main>
+</body>
+</html>

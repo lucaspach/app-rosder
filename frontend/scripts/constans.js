@@ -1,0 +1,1 @@
+const URLAPICUSTOMER = 'http://localhost:8080/api/customer/sign-up/physical'

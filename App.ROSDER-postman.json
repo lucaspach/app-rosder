@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "52cbcb2b-1d7a-4eba-bb4d-f05438690a5c",
+		"name": "App_ROSDER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obteniendo version de build",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/version/number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"version",
+						"number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizando POST echo test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"mensaje recibido\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener suma de numeros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/math/sum?valores=1.1&valores=2.22&valores=3.33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"math",
+						"sum"
+					],
+					"query": [
+						{
+							"key": "valores",
+							"value": "1.1"
+						},
+						{
+							"key": "valores",
+							"value": "2.22"
+						},
+						{
+							"key": "valores",
+							"value": "3.33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los paises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/country/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"country",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customer/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar nuevo cliente(p juridica)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": 131313,\r\n    \"businessName\": \"Pacheco's S.A\",\r\n    \"foundationYear\": 1990\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer/sign-up/juridica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"sign-up",
+						"juridica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar nuevo cliente(p fisica)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": 101010,\r\n    \"firstName\": \"Lucas\",\r\n    \"lastName\": \"Pacheco\",\r\n    \"cc\": 165183\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer/sign-up/fisica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"sign-up",
+						"fisica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un registro x RUT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customer/1212",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"1212"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un registro x RUT",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customer/101010",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"101010"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un registro x RUT(p fisica)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": 111111,\r\n    \"firstName\": \"Viviana\",\r\n    \"lastName\": \"Olmos\",\r\n    \"cc\": 151522\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer/fisica/111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"fisica",
+						"111111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un registro x RUT(p juridica)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": 131313,\r\n    \"businessName\": \"Pacheco S.A\",\r\n    \"foundationYear\": \"1991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer/juridica/131313",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"juridica",
+						"131313"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar nueva cuenta corriente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"accountNumber\": 1,\r\n    \"balance\": 111.444,\r\n    \"money\": {\r\n        \"id\": 1\r\n    }       \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/currentaccount/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currentaccount",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar cuenta corriente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currentaccount/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currentaccount",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos las cuentas corrientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currentaccount/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currentaccount",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar nueva transacción",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentAccount\": {\r\n        \"accountNumber\": 1,\r\n        \"money\": {\r\n            \"id\": 1\r\n        },\r\n        \"transactions\": [],\r\n        \"balance\": -838.72\r\n    },\r\n    \"transactionType\": {\r\n        \"id\": 1,\r\n        \"name\": \"DEBITO\"\r\n    },\r\n    \"description\": \"Compra FRAVEGA\",\r\n    \"amount\": 950.1588\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener transacciones x cuenta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentAccount\": {\r\n        \"accountNumber\": 1,\r\n        \"money\": {\r\n            \"id\": 1\r\n        },\r\n        \"transactions\": [],\r\n        \"balance\": 111.44\r\n    },\r\n    \"transactionType\": {\r\n        \"id\": 2,\r\n        \"name\": \"CREDITO\"\r\n    },\r\n    \"description\": \"Compra FRAVEGA\",\r\n    \"amount\": 950.1588\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/transaction/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transaction",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

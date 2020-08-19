@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "52cbcb2b-1d7a-4eba-bb4d-f05438690a5c",
+		"name": "App_ROSDER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obteniendo version de build",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/version/number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"version",
+						"number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizando POST echo test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"mensaje recibido\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener suma de numeros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/math/sum?valores=1.1&valores=2.22&valores=3.33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"math",
+						"sum"
+					],
+					"query": [
+						{
+							"key": "valores",
+							"value": "1.1"
+						},
+						{
+							"key": "valores",
+							"value": "2.22"
+						},
+						{
+							"key": "valores",
+							"value": "3.33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los paises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/country/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"country",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

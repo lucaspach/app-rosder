@@ -16,7 +16,7 @@ Test Unitarios: Estructura given, when, them para cada función.
 
 - Back-end completo, levantar en el server con: mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=dev"
 
-- Con respecto al front-end elegi React y trate de aplicar algunas cosas pero no llegue a mucho (y tenia la entrega en el día). Deje el front-end para el final, la verdad que de las 3 partes globales (analiss y diseño de soluciones, front-end, back-end) es la que menos me apasiona. Sumado a que los desarrolos que tenia eran con HTML, CSS y JS crudos no pude llegar a implementar algo que funcione. Tuve problemas varios a la hora de conectar un formulario simple y la función "fetch" mi API.
+- Con respecto al front-end elegi React y trate de aplicar algunas cosas pero no llegue a mucho (y tenia la entrega en el día) ya que deje el front-end para el final. Sumado a que los desarrollos que tenia eran con HTML, CSS y JS crudos no pude llegar a implementar algo que funcione. Tuve problemas varios a la hora de conectar un formulario simple y la función "fetch" mi API.
 Tome el diseño de un proyecto academico de APPS de Gifs para tratar de abstraerme y buscando puntos que pueda reutilizar pero no logre hacer enviar el POST como formulario correctamente.
 Adjunto de todas formas el proyecto en crudo y las distintas peticiones que use con POSTMAN para probar la API.
 

@@ -51,7 +51,7 @@ curl --location --request GET 'http://localhost:8080/api/customer/101010'
 curl --location --request DELETE 'http://localhost:8080/api/customer/101010'
 
 6. **actualizar un cliente por RUT (persona fisica)**
-curl --location --request PUT 'http://localhost:8080/api/customer/fisica/111111' \
+curl --location --request PUT 'http://localhost:8080/api/customer/physical/111111' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "rut": 111111,
@@ -61,13 +61,12 @@ curl --location --request PUT 'http://localhost:8080/api/customer/fisica/111111'
 }'
 
 7. **actualizar un cliente por RUT (persona juridica)** 
-curl --location --request PUT 'http://localhost:8080/api/customer/fisica/111111' \
+curl --location --request PUT 'http://localhost:8080/api/customer/legal/131313' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "rut": 111111,
-    "firstName": "Viviana",
-    "lastName": "Olmos",
-    "cc": 151522
+    "rut": 131313,
+    "businessName": "Pacheco S.A",
+    "foundationYear": "1991"
 }'
 
 

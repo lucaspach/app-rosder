@@ -112,7 +112,7 @@ public class CustomerController {
         }
     }
 
-    @PutMapping("/fisica/{rut}")
+    @PutMapping("/physical/{rut}")
     public ResponseEntity updateByRut(@RequestBody PhysicalPerson customer, @PathVariable long rut) {
         try {
             if (rut <= 0) return ResponseEntity.status(400).body("RUT must be a positive number");
@@ -129,7 +129,7 @@ public class CustomerController {
         }
     }
 
-    @PutMapping("/juridica/{rut}")
+    @PutMapping("/legal/{rut}")
     public ResponseEntity updateByRut(@RequestBody LegalPerson customer, @PathVariable long rut) {
         try {
             if (rut <= 0) return ResponseEntity.status(400).body("RUT must be a positive number");
